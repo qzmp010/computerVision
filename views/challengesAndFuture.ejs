@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <header>
+            <h1>Computer Vision and Autonomous Vehicles</h1>
+        </header>
+
+        <%- include('partials/nav.ejs') %>
+
+            <main>
+                
+                <figure>
+                    <img class="main-img" src="img/autonomous-vehicle-research-header-post-January2020.jpg"
+                        alt="Bird's eye view of cars on a curved road">
+                </figure>
+
+
+                <div class="sections">
+                    <section>
+                        <h2 id="challenges">Current Challenges</h2>
+                        <ul>
+                            <li><strong>Adverse Weather &amp; Lighting:</strong> rain, fog, snow, glare.</li>
+                            <li><strong>Long-tail Events:</strong> rare, unpredictable edge cases.</li>
+                            <li><strong>Occlusion:</strong> objects hidden behind others.</li>
+                            <li><strong>Domain Shift:</strong> new cities/countries look different.</li>
+                            <li><strong>Latency &amp; Compute:</strong> real-time inference on vehicle hardware.</li>
+                            <li><strong>Safety &amp; Verification:</strong> proving performance at scale.</li>
+                            <li><strong>Privacy &amp; Security:</strong> safeguarding data &amp; resisting attacks.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 id="mitigations">What Helps Mitigate These?</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Challenge</th>
+                                    <th scope="col">Technique</th>
+                                    <th scope="col">Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Weather/Lighting</th>
+                                    <td>Sensor diversity; polarization; image enhancement</td>
+                                    <td>Improves robustness when vision degrades</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Long-tail Events</th>
+                                    <td>Simulation, synthetic data, continual learning</td>
+                                    <td>Exposes models to rare scenarios safely</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Occlusion</th>
+                                    <td>Tracking + prediction; multi-view fusion</td>
+                                    <td>Maintains awareness of partially hidden objects</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Domain Shift</th>
+                                    <td>Domain adaptation; map/context priors</td>
+                                    <td>Transfers performance to new geographies</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Latency/Compute</th>
+                                    <td>Model optimization, quantization, acceleration</td>
+                                    <td>Meets real-time constraints on embedded hardware</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Safety Assurance</th>
+                                    <td>Scenario coverage, formal methods, staged rollout</td>
+                                    <td>Builds evidence for reliability</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h2 id="trends">Future Trends</h2>
+                        <details>
+                            <summary><strong>End-to-End Learning</strong></summary>
+                            <p>Train perception-to-plan pipelines with safety guards.</p>
+                        </details>
+
+                        <details>
+                            <summary><strong>V2X Connectivity</strong></summary>
+                            <p>Cars communicate with cars/infrastructure to “see” beyond line of sight.</p>
+                        </details>
+
+                        <details>
+                            <summary><strong>Edge + Cloud</strong></summary>
+                            <p>Smart offloading and fleet learning improve models continuously.</p>
+                        </details>
+
+                        <details>
+                            <summary><strong>Cheaper Sensors</strong></summary>
+                            <p>Solid-state LiDAR & high-res radar reduce costs.</p>
+                        </details>
+
+                        <details>
+                            <summary><strong>Regulatory Frameworks</strong></summary>
+                            <p>Clearer testing/operations rules expand deployment zones.</p>
+                        </details>
+                    </section>
+
+                    <section id="sources">
+                        <h2>Sources</h2>
+                        <ul>
+                            <li><a href="https://www.sciencedirect.com/science/article/pii/S0924271622003367"
+                                    target="_blank">Perception and sensing for autonomous vehicles under adverse weather
+                                    conditions: A survey</a></li>
+                            <li><a href="https://www.sciencedirect.com/science/article/pii/S2590198223002270"
+                                    target="_blank">Vehicle-to-everything (V2X) in the autonomous vehicles domain – A
+                                    critical
+                                    review</a></li>
+                            <li><a href="https://www.fehrandpeers.com/blog/autonomous-vehicle-research/"
+                                    target="_blank">Image:
+                                    fehrandpeers.com</a></li>
+                        </ul>
+                    </section>
+                </div>
+
+            </main>
+
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

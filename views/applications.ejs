@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <header>
+            <h1>Computer Vision and Autonomous Vehicles</h1>
+        </header>
+
+        <%- include('partials/nav.ejs') %>
+
+            <main>
+
+                <figure>
+                    <img class="main-img" src="img/lidar2.webp" alt="Graphic showing Lidar sensor's range">
+                </figure>
+
+                <div class="sections">
+
+                    <section>
+                        <h2 id="tasks">Key Vision Tasks in Action</h2>
+                        <details>
+                            <summary><strong>Lane Keeping</strong></summary>
+                            <p>Segments the drivable area and keeps the vehicle centered within the lane boundaries
+                                using
+                                vision-based lane detection and control feedback.</p>
+                        </details>
+
+                        <details>
+                            <summary><strong>Traffic Light &amp; Sign Recognition</strong></summary>
+                            <p>Detects the state of traffic lights and reads road signs so the car can comply with
+                                traffic rules
+                                and speed limits.</p>
+                        </details>
+
+                        <details>
+                            <summary><strong>Pedestrian &amp; Cyclist Safety</strong></summary>
+                            <p>Uses fast detection, tracking, and motion prediction to ensure safe distances from
+                                vulnerable
+                                road users such as pedestrians and cyclists.</p>
+                        </details>
+
+                        <details>
+                            <summary><strong>Overtaking &amp; Merging</strong></summary>
+                            <p>Identifies nearby vehicles, estimates their speed and distance, and plans a safe gap for
+                                overtaking or merging into traffic.</p>
+                        </details>
+
+                        <details>
+                            <summary><strong>Parking</strong></summary>
+                            <p>Relies on near-field perception using cameras and ultrasonic sensors to guide precise
+                                low-speed
+                                maneuvers in tight spaces.</p>
+                        </details>
+                    </section>
+
+                    <section>
+                        <h2 id="examples">Example Setups</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">System</th>
+                                    <th scope="col">Primary Sensors</th>
+                                    <th scope="col">Strength</th>
+                                    <th scope="col">Trade-off</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Camera-Centric</th>
+                                    <td>Multiple cameras (front/side/rear), radar</td>
+                                    <td>Rich semantics; cost-effective</td>
+                                    <td>Challenged by low light &amp; weather</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">LiDAR-Heavy</th>
+                                    <td>360° LiDAR, cameras, radar</td>
+                                    <td>Accurate 3D geometry &amp; localization</td>
+                                    <td>Higher cost; sensor complexity</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">HD-Map Aided</th>
+                                    <td>LiDAR/camera + GNSS/IMU + prebuilt HD maps</td>
+                                    <td>Reliable localization; context awareness</td>
+                                    <td>Map maintenance required</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section id="sources">
+                        <h2>Sources</h2>
+                        <ul>
+                            <li><a href="https://arxiv.org/html/2311.09093v3" target="_blank">Applications of Computer
+                                    Vision
+                                    in Autonomous Vehicles: Methods, Datasets, and Future Trends</a></li>
+                            <li><a href="https://www.dpvtransportation.com/sensor-suite-autonomous-vehicle-sensors-cameras-lidar-radar/"
+                                    target="_blank">Sensor Suite: How Cameras, LiDAR, and RADAR Work Together in
+                                    Autonomous
+                                    Cars</a></li>
+                            <li><a href="https://polyrise.com/sensors" target="_blank">Image: polyrise.com</a></li>
+                        </ul>
+                    </section>
+                </div>
+
+            </main>
+
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

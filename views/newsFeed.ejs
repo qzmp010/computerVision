@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <header>
+            <h1>Computer Vision and Autonomous Vehicles</h1>
+        </header>
+
+        <%- include('partials/nav.ejs') %>
+
+            <main>
+
+                <div class="news-feed">
+
+                    <% feed.forEach(f=> { %>
+                        <article class="card">
+                            <img class="thumb" src="<%= f.urlToImage %>" alt="Article image for: <%= f.title %>" />
+                            <div class="content">
+                                <h2>
+                                    <%= f.title %>
+                                </h2>
+                                <div class="meta-bar">
+                                    <span class="tag">
+                                        Source: <%= f.source %>
+                                    </span>
+                                    <span class="tag">By <%= f.author %></span>
+                                    <time class="tag" datetime="<%= f.publishedAt %>">
+                                        <%= new Date(f.publishedAt).toDateString() %>
+                                    </time>
+                                </div>
+                                <p>
+                                    <%= f.description %>
+                                </p>
+                                <a class="read" href="<%= f.url %>" target="_blank">
+                                    <span>Read full story</span>
+                                </a>
+                            </div>
+                        </article>
+                    <% }); %>
+
+                </div>
+
+            </main>
+
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <header>
+            <h1>Computer Vision and Autonomous Vehicles</h1>
+        </header>
+
+        <%- include('partials/nav.ejs') %>
+
+            <main>
+
+                <figure>
+                    <img class="main-img" src="img/av-lidar.webp"
+                        alt="Lidar sensor mounted on top of an autonomous vehicle">
+                </figure>
+
+                <div class="sections">
+
+                    <section>
+                        <h2 id="pipeline">Perception Pipeline</h2>
+                        <ol>
+                            <li><strong>Capture:</strong> Cameras/LiDAR/Radar collect raw data.</li>
+                            <li><strong>Preprocess:</strong> Undistort images, normalize, timestamp sync.</li>
+                            <li><strong>Perception:</strong> Detect, classify, and track objects and lanes.</li>
+                            <li><strong>Fusion:</strong> Merge multiple sensors into a single world model.</li>
+                            <li><strong>Prediction:</strong> Estimate where objects will be next.</li>
+                            <li><strong>Planning:</strong> Choose a safe path and speed.</li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2 id="sensors">Sensor Suite</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sensor</th>
+                                    <th scope="col">Strengths</th>
+                                    <th scope="col">Limitations</th>
+                                    <th scope="col">Typical Uses</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Cameras</th>
+                                    <td>High detail; color &amp; texture; sign/light recognition</td>
+                                    <td>Sensitive to lighting, glare, weather</td>
+                                    <td>Lane detection, traffic lights/signs, object classification</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">LiDAR</th>
+                                    <td>Accurate depth; 3D structure; robust to lighting</td>
+                                    <td>Costly; moving parts; reduced range in heavy rain/fog</td>
+                                    <td>3D mapping, obstacle detection, localization</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Radar</th>
+                                    <td>Great range &amp; velocity; works in bad weather</td>
+                                    <td>Lower resolution; harder to classify</td>
+                                    <td>Long-range vehicles detection, adaptive cruise</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Ultrasonic</th>
+                                    <td>Close-range accuracy; inexpensive</td>
+                                    <td>Very short range</td>
+                                    <td>Parking assist, curb &amp; bumper proximity</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">IMU/GNSS</th>
+                                    <td>Position &amp; motion estimates</td>
+                                    <td>GPS drift; tunnels &amp; urban canyons</td>
+                                    <td>Localization, stabilization, map alignment</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h2 id="ml">Core Vision Tasks &amp; Models</h2>
+                        <dl>
+                            <dt>Object Detection</dt>
+                            <dd>Finds and localizes cars, pedestrians, cyclists (e.g., with bounding boxes).</dd>
+
+                            <dt>Semantic Segmentation</dt>
+                            <dd>Labels each pixel (road, sidewalk, sky) to understand drivable space.</dd>
+
+                            <dt>Instance Segmentation</dt>
+                            <dd>Separates different instances of the same class (two pedestrians, not one blob).</dd>
+
+                            <dt>Multi-Object Tracking (MOT)</dt>
+                            <dd>Assigns identities across frames to estimate trajectories.</dd>
+
+                            <dt>Depth Estimation</dt>
+                            <dd>Predicts distance to objects; can be LiDAR- or vision-based (stereo/monocular).</dd>
+
+                            <dt>Lane/Marker Detection</dt>
+                            <dd>Identifies lane boundaries and topology for lane keeping and planning.</dd>
+                        </dl>
+                    </section>
+                    <section id="sources">
+                        <h2>Sources</h2>
+                        <ul>
+                            <li><a href="https://www.ibm.com/topics/computer-vision" target="_blank">IBM – What Is
+                                    ComputerVision?</a></li>
+                            <li><a href="https://www.mdpi.com/1424-8220/25/19/6033" target="_blank">A Review of
+                                    Multi-Sensor
+                                    Fusion in Autonomous Driving</a></li>
+                            <li><a href="https://z100missoula.com/future-transportation-autonomous-cars/"
+                                    target="_blank">Image:
+                                    z100missoula.com</a></li>
+                        </ul>
+                    </section>
+                </div>
+
+            </main>
+
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

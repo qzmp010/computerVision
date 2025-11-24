@@ -102,7 +102,7 @@ footer {
 }
 
 .main-img {
-    max-width: 450px;
+    width: 450px;
 }
 
 a {
@@ -125,4 +125,69 @@ details>p {
 
 #footer-logo {
     height: 40px;
+}
+
+.meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: .25rem;
+    font-size: .9rem;
+}
+
+.card {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    justify-items: center;
+    margin-bottom: 3rem;
+}
+
+.thumb {
+    max-width: 450px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.news-feed .content {
+    padding: 1rem;
+}
+
+.news-feed h2 {
+    margin: 0 0 .5rem 0;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.news-feed p {
+    margin: .5rem 0 .75rem 0;
+    color: #d8e3ff;
+}
+
+a.read {
+    display: inline-flex;
+    align-items: center;
+    padding: .55rem .8rem;
+    border-radius: 10px;
+    font-weight: 300;
+}
+
+a.read:hover, a.read:focus {
+    background: #ffe261;
+    color: #000;
+    transition: 0.5s;
+}
+
+.tag {
+    padding: .15rem .5rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background-color: #525252;
+    font-size: .8rem;
+    margin-right: .3rem;
+}
+
+#index-img {
+    height: 900px;
+    object-fit: cover;
+    background-color: #000;
 }
