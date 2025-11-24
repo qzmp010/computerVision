@@ -5,6 +5,12 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
+// active page tracker
+app.use((req, res, next) => {
+  res.locals.activePage = req.path.split('/')[1] || 'home';
+  next();
+});
+
 app.get('/', async (req, res) => {
     let randomImage;
     try {
