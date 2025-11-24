@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <header>
+            <h1>Computer Vision and Autonomous Vehicles</h1>
+        </header>
+
+        <%- include('partials/nav.ejs') %>
+
+            <main>
+
+                <figure>
+                    <img class="main-img" src="img/sm-coloradan_fall23_half1.webp"
+                        alt="Graphic of vehicles driving on the road with various sensors">
+                </figure>
+
+                <div class="sections">
+                    <section>
+                        <h2>What Is Computer Vision?</h2>
+                        <p>
+                            Computer Vision is a branch of Artificial Intelligence (AI) that enables machines to
+                            interpret and
+                            understand visual information from the world — just like humans do with their eyes and
+                            brain. Using
+                            cameras and advanced algorithms, a computer vision system can detect, recognize, and track
+                            objects
+                            such as people, vehicles, road signs, and traffic lights.
+                        </p>
+                        <p>
+                            In simple terms, computer vision allows a machine to <em>see</em>, <em>analyze</em>, and
+                            <em>act</em> based on what it observes.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>What Are Autonomous Vehicles?</h2>
+                        <p>
+                            An <strong>autonomous vehicle</strong> (often called a self-driving car) is a car that can
+                            sense its
+                            environment and navigate without human input. These vehicles rely on a combination of
+                            sensors,
+                            cameras, radar, and AI software to make driving decisions.
+                        </p>
+                        <p>
+                            There are <strong>five levels of driving automation</strong>, defined by the Society of
+                            Automotive
+                            Engineers (SAE):
+                        </p>
+                        <ol>
+                            <li>
+                                <strong>Level 0</strong> - No automation (human fully in control).
+                            </li>
+                            <li>
+                                <strong>Level 1</strong> - Driver assistance (e.g., cruise control).
+                            </li>
+                            <li>
+                                <strong>Level 2</strong> - Partial automation (lane centering + speed control).
+                            </li>
+                            <li>
+                                <strong>Level 3</strong> - Conditional automation (car drives itself but may need human
+                                intervention).
+                            </li>
+                            <li>
+                                <strong>Level 4-5</strong> - High and full automation (no human driver required).
+                            </li>
+                        </ol>
+                        <p>Most current cars, such as Tesla’s Autopilot, are around <em>Level 2</em> or <em>Level
+                                3</em>.</p>
+                    </section>
+
+                    <section id="sources">
+                        <h2>Sources</h2>
+                        <ul>
+                            <li><a href="https://blog.ansi.org/ansi/sae-levels-driving-automation-j-3016-2021/"
+                                    target="_blank">ANSI
+                                    Blog – SAE Levels of Driving Automation</a></li>
+                            <li><a href="https://www.ibm.com/topics/computer-vision" target="_blank">IBM – What Is
+                                    Computer
+                                    Vision?</a></li>
+                            <li><a href="https://www.colorado.edu/coloradan/2023/11/06/world-ready-self-driving-cars"
+                                    target="_blank">Image: Colorado.edu</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>
